@@ -1,0 +1,9 @@
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\bin\Debug\Sistema-Base-BI.exe.config
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema-Base-BI.csprojResolveAssemblyReference.cache
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema_Base_BI.Form1.resources
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema_Base_BI.Properties.Resources.resources
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema-Base-BI.csproj.GenerateResource.Cache
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\bin\Debug\Sistema-Base-BI.exe
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\bin\Debug\Sistema-Base-BI.pdb
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema-Base-BI.exe
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema-Base-BI.pdb

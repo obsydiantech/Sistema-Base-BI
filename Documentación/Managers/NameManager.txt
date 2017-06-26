@@ -1,0 +1,19 @@
+Alcance:
+	Este Manager Contendrá el directorio de nombres de los archivos y carpetas necesarios para la inicialización del sistema:
+	- Directorio de la carpeta del sistema base
+	- error_logs.txt
+	- config.txt
+
+
+Métodos Privados:
+	- CreateDirectoriesAndFiles()
+	- CreateRootDirectory()
+	- CreateErrorLogsFile()
+	- CreateConfigFile()
+
+Métodos Públicos:
+	- Init()
+
+Comunicación Directa con otros Managers:
+	- Manager: [DESC]
+	- 

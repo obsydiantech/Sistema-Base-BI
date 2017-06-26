@@ -1,0 +1,12 @@
+Alcance:
+	Este Manager permite ejecutar un proceso en paralelo a través de un background worker, invocando la ventana de carga mientras tanto.
+
+Métodos Privados:
+	- BgWorker_RunWorkerCompleted()
+	- BgWorker_DoWork();
+
+Métodos Públicos:
+	- EjecutarTareaEnSegundoPlano()
+
+Comunicación Directa con otros Managers:
+	- FormsManager. Muestra el LoadingForm.

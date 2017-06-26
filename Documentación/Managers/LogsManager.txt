@@ -1,0 +1,12 @@
+Alcance:
+	Este Manager se encargará de escribir los logs y error_log en el archivo correspondiente.
+
+Métodos Privados:
+	- 
+
+Métodos Públicos:
+	- EscribirLog()
+	-
+
+Comunicación Directa con otros Managers:
+	- 

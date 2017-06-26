@@ -1,0 +1,14 @@
+Alcance:
+	[DESC]
+
+Métodos Privados:
+	- Method()
+	-
+
+Métodos Públicos:
+	- Method()
+	-
+
+Comunicación Directa con otros Managers:
+	- Manager: [DESC]
+	- 

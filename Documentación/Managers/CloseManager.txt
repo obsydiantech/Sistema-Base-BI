@@ -1,0 +1,9 @@
+Alcance:
+	Cierra la aplicación completa.
+
+Métodos Privados:
+	-
+
+Métodos Públicos:
+	- CloseWholeApp()
+	-

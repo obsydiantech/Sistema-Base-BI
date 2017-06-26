@@ -1,0 +1,13 @@
+Alcance:
+	Este Manager se encargará de controlar las Excepciones de manera correcta.
+
+Métodos Privados:
+	-
+
+Métodos Públicos:
+	- CatchException()
+	-
+
+Comunicación Directa con otros Managers:
+	- LogManager: Escribe la Excepción en SYSTEM_ROOT_FOLDER.error_logs.txt ó en el escritorio si el LogManager produce otra excepción.
+	- 

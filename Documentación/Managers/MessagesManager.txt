@@ -1,0 +1,17 @@
+Alcance:
+	Este Manager se encargará de generarlos mensajes correspondientes bajo los títulos:
+	- Información
+	- Confirmación
+	- ADVERTENCIA (Agregando el texto "Porfavor, contacte al desarrollador.")
+
+Métodos Privados:
+	-
+
+Métodos Públicos:
+	- NewMessage()
+	- NewErrorMessage()
+	- NewConfirmMessage()
+	-
+
+Comunicación Directa con otros Managers:
+	- Llama al Exception Manager cuando se invoca NewErrorMessage().
