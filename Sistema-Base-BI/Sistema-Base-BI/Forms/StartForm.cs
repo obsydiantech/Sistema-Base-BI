@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_Base_BI
+namespace Sistema_Base_BI.Forms
 {
-    public partial class Form1 : Form
+    public partial class StartForm : Form
     {
-        public Form1()
+        public StartForm()
         {
             InitializeComponent();
+        }
+
+        private void StartForm_ObsLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
