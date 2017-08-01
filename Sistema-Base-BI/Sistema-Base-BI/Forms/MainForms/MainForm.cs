@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_Base_BI.Forms
+namespace Sistema_Base_BI.Forms.MainForms
 {
-    public partial class StartForm : Form
+    public partial class MainForm : MetroFramework.Forms.MetroForm
     {
-        public StartForm()
+        public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void StartForm_ObsLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -58,10 +58,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\StartForm.cs">
+    <Compile Include="Forms\Admin_Forms\Management\LicenciaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StartForm.Designer.cs">
+    <Compile Include="Forms\Admin_Forms\Management\LicenciaForm.Designer.cs">
+      <DependentUpon>LicenciaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin_Forms\Users\NewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin_Forms\Users\NewUserForm.Designer.cs">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForms\StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForms\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Managers\CloseManager.cs" />
@@ -73,7 +97,19 @@
     <Compile Include="Managers\NamesManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\StartForm.resx">
+    <EmbeddedResource Include="Forms\Admin_Forms\Management\LicenciaForm.resx">
+      <DependentUpon>LicenciaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin_Forms\Users\NewUserForm.resx">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForms\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -102,6 +138,11 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Entities\" />
+    <Folder Include="Forms\Module_Forms\Clientes\" />
+    <Folder Include="Forms\Module_Forms\Dashboard\" />
+    <Folder Include="Forms\Module_Forms\Estadísticas\" />
+    <Folder Include="Forms\Module_Forms\Proveedores\" />
+    <Folder Include="Forms\Module_Forms\Ventas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

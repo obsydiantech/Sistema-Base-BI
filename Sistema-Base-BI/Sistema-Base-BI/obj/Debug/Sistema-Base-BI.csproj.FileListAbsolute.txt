@@ -9,3 +9,8 @@ C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI
 C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\bin\Debug\MetroFramework.dll
 C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema_Base_BI.Forms.StartForm.resources
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema-Base-BI.csprojResolveAssemblyReference.cache
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema_Base_BI.Forms.Admin_Forms.Users.NewUserForm.resources
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema_Base_BI.Forms.MainForms.LoginForm.resources
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema_Base_BI.Forms.MainForms.MainForm.resources
+C:\Users\BIXION\Documents\GitHub\Sistema-Base-BI\Sistema-Base-BI\Sistema-Base-BI\obj\Debug\Sistema_Base_BI.Forms.Admin_Forms.Management.LicenciaForm.resources
