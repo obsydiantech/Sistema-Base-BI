@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 
 namespace Sistema_Base_BI.Managers
 {
@@ -18,8 +17,6 @@ namespace Sistema_Base_BI.Managers
             }
         }
 
-        private StreamWriter streamWriter;
-
         // |---------------Constructores---------------|
         private LogManager()
         {
@@ -30,19 +27,8 @@ namespace Sistema_Base_BI.Managers
 
         public void EscribirLog(String log)
         {
-            try
-            {
-                streamWriter = new StreamWriter(NamesManager.ERROR_LOGS_FILEPATH, true);
-                streamWriter.WriteLine("[" + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + "]" + log);
-                streamWriter.Close();
-            }
-            catch (IOException e)
-            {
-                streamWriter = new StreamWriter(NamesManager.Instance.DESKTOP_PATH + "\\error_logs.txt", true);
-                streamWriter.Write(log);
-                streamWriter.Close();
+            if(!FileManager.Instance.WriteFile(NamesPathsManager.Instance.ERROR_LOGS_FILEPATH, "[" + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + "]" + log));
                 MessagesManager.Instance.NewErrorMessage("No se pudo escribir el log correctamente.\nSe generó el error_log en el escritorio.");
-            }
         }
 
         // |---------------Métodos Privados---------------|

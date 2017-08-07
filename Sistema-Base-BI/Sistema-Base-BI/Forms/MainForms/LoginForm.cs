@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
+using MetroFramework.Components;
 using MetroFramework.Forms;
 using Sistema_Base_BI.Forms.Admin_Forms.Users;
 
@@ -14,9 +9,15 @@ namespace Sistema_Base_BI.Forms.MainForms
 {
     public partial class LoginForm : MetroForm
     {
+
         public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            components.SetStyle(this);
         }
 
         private void LoginForm_NewUser_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace Sistema_Base_BI.Forms.MainForms
 
             } else
             {
-                MetroFramework.MetroMessageBox.Show(this, "Usuario o contraseña incorrectos", "Error de acceso",MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
+                MetroFramework.MetroMessageBox.Show(this, "Usuario o contraseña incorrectos", "Error de acceso",MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
 

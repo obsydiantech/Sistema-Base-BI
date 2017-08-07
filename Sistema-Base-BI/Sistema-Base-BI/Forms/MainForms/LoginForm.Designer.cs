@@ -180,7 +180,6 @@
             this.LoginForm_LoginButton.Location = new System.Drawing.Point(49, 272);
             this.LoginForm_LoginButton.Name = "LoginForm_LoginButton";
             this.LoginForm_LoginButton.Size = new System.Drawing.Size(308, 46);
-            this.LoginForm_LoginButton.Style = MetroFramework.MetroColorStyle.Green;
             this.LoginForm_LoginButton.TabIndex = 7;
             this.LoginForm_LoginButton.Text = "Iniciar Sesión";
             this.LoginForm_LoginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,7 +193,6 @@
             this.LoginForm_NewUser.Location = new System.Drawing.Point(452, 85);
             this.LoginForm_NewUser.Name = "LoginForm_NewUser";
             this.LoginForm_NewUser.Size = new System.Drawing.Size(81, 94);
-            this.LoginForm_NewUser.Style = MetroFramework.MetroColorStyle.Green;
             this.LoginForm_NewUser.TabIndex = 8;
             this.LoginForm_NewUser.Text = "Nuevo";
             this.LoginForm_NewUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -211,10 +209,10 @@
             this.LoginForm_LicenceButton.Location = new System.Drawing.Point(452, 197);
             this.LoginForm_LicenceButton.Name = "LoginForm_LicenceButton";
             this.LoginForm_LicenceButton.Size = new System.Drawing.Size(81, 94);
-            this.LoginForm_LicenceButton.Style = MetroFramework.MetroColorStyle.Green;
             this.LoginForm_LicenceButton.TabIndex = 9;
             this.LoginForm_LicenceButton.Text = "Nuevo";
             this.LoginForm_LicenceButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.LoginForm_LicenceButton.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.LoginForm_LicenceButton.TileImage = ((System.Drawing.Image)(resources.GetObject("LoginForm_LicenceButton.TileImage")));
             this.LoginForm_LicenceButton.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LoginForm_LicenceButton.UseSelectable = true;
@@ -253,11 +251,15 @@
             this.Controls.Add(this.LoginForm_UsuarioLabel);
             this.Controls.Add(this.LoginForm_PassTextBox);
             this.Controls.Add(this.LoginForm_UserTextBox);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(617, 344);
+            this.MinimumSize = new System.Drawing.Size(617, 344);
             this.Name = "LoginForm";
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "Iniciar Sesión";
-            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

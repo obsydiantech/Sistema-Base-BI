@@ -1,0 +1,13 @@
+Alcance:
+	Personalización del color primario del sistema.
+
+Métodos Privados:
+	-
+
+Métodos Públicos:
+	- GetPrimaryColor()
+	- SetPrimaryColor()
+	- GetApplicationVersion()
+
+Comunicación Directa con otros Managers:
+	- 

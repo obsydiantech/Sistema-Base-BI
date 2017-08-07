@@ -17,7 +17,7 @@ namespace Sistema_Base_BI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.StartForm());
+            Application.Run(new Forms.MainForms.InitForm());
         }
     }
 }

@@ -3,31 +3,35 @@ using System.IO;
 
 namespace Sistema_Base_BI.Managers
 {
-    public class NamesManager // Singleton
+    public class NamesPathsManager // Singleton
     {
         // |---------------Atributos---------------|
-        private static NamesManager instance;
-        public static NamesManager Instance
+        private static NamesPathsManager instance;
+        public static NamesPathsManager Instance
         {
             get
             {
                 if (instance == null)
-                    instance = new NamesManager();
+                    instance = new NamesPathsManager();
 
                 return instance;
             }
         }
 
-        public const String SYSTEM_NAME = "Sistema Base";
-        public const String SYSTEM_ROOT_FOLDER = @"C:\Program Files (x86)\" + SYSTEM_NAME + @"\";
-        public const String ERROR_LOGS_FILEPATH = SYSTEM_ROOT_FOLDER + "error_logs.txt";
-        public const String CONFIG_FILEPATH = SYSTEM_ROOT_FOLDER + "config.txt";
-        public String DESKTOP_PATH = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        public String SYSTEM_NAME;
+        public String SYSTEM_ROOT_FOLDER;
+        public String ERROR_LOGS_FILEPATH;
+        public String CONFIG_FILEPATH;
+        public String DESKTOP_PATH;
 
         // |---------------Constructores---------------|
-        private NamesManager()
+        private NamesPathsManager()
         {
-
+            SYSTEM_NAME = "Sistema Base";
+            SYSTEM_ROOT_FOLDER = "C:/Program Files (x86)/" + SYSTEM_NAME + "/";
+            ERROR_LOGS_FILEPATH = SYSTEM_ROOT_FOLDER + "error_logs.txt";
+            CONFIG_FILEPATH = SYSTEM_ROOT_FOLDER + "config.txt";
+            DESKTOP_PATH = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         }
 
         // |---------------Métodos Públicos---------------|

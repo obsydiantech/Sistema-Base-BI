@@ -1,6 +1,6 @@
-﻿namespace Sistema_Base_BI.Forms.MainForms
+﻿namespace Sistema_Base_BI.Forms
 {
-    partial class MainForm
+    partial class LoadingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // MainForm
+            // LoadingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(156, 113);
-            this.Name = "MainForm";
+            this.ClientSize = new System.Drawing.Size(342, 185);
+            this.Name = "LoadingForm";
+            this.Text = "LoadingForm";
+            this.Load += new System.EventHandler(this.LoadingForm_Load);
             this.ResumeLayout(false);
 
         }

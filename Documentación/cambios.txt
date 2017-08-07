@@ -1,0 +1,5 @@
+- StartForm cambia el nombre a InitForm
+- Se inicializan los Managers en el ahora InitForm, entre el FadeingIn y el FadeingOut, esperando asincrónicamente
+- Ahora en LoadingManager se llama al método a ejecutar en background, seguido de la opción de mostrar o no un form loading
+- Formularios preexistentes limitados a su size original
+- Se agregó la clase "MetroPersonalization". En esta clase estará declarado el Style y Theme (aspecto visual) de todos los formularios del proyecto. Lo único que hay que hacer para que el formulario aplique la configuración, es declarar su método Load() y dentro escribir components.SetStyle(this);

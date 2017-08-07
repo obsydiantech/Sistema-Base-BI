@@ -76,7 +76,6 @@
             this.metroTile1.Location = new System.Drawing.Point(454, 296);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(221, 64);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTile1.TabIndex = 3;
             this.metroTile1.Text = "Registrar Licencia";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,7 +88,6 @@
             this.LicenciaForm_CancelButton.Location = new System.Drawing.Point(190, 296);
             this.LicenciaForm_CancelButton.Name = "LicenciaForm_CancelButton";
             this.LicenciaForm_CancelButton.Size = new System.Drawing.Size(221, 64);
-            this.LicenciaForm_CancelButton.Style = MetroFramework.MetroColorStyle.Green;
             this.LicenciaForm_CancelButton.TabIndex = 4;
             this.LicenciaForm_CancelButton.Text = "Cancelar";
             this.LicenciaForm_CancelButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,7 +103,6 @@
             this.LicenciaForm_TerminosCheckBox.Size = new System.Drawing.Size(350, 15);
             this.LicenciaForm_TerminosCheckBox.TabIndex = 5;
             this.LicenciaForm_TerminosCheckBox.Text = "Acepto los términos y condiciones de Obsydian Technologies.";
-            this.LicenciaForm_TerminosCheckBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.LicenciaForm_TerminosCheckBox.UseSelectable = true;
             // 
             // LicenciaForm_TerminosLink
@@ -141,6 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(839, 388);
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.LicenciaForm_TerminosLink);
@@ -150,10 +148,14 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LicenciaForm_LicenciaHastaLabel);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(839, 388);
+            this.MinimumSize = new System.Drawing.Size(839, 388);
             this.Name = "LicenciaForm";
-            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "Registrar Producto";
-            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
+            this.Load += new System.EventHandler(this.LicenciaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
