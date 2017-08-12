@@ -1,0 +1,34 @@
+﻿public class CLASE 
+{
+    // |---------------Atributos---------------|
+    private static CLASE instance;
+    public static CLASE Instance
+    {
+        get
+        {
+            if (instance == null)
+            instance = new CLASE();
+
+            return instance;
+        }
+    }
+
+    // |---------------Constructores---------------|
+    private CLASE()
+    {
+
+    }
+
+    // |---------------Métodos Públicos---------------|
+    public Boolean Init()
+    {
+        if(LOGICACORRECTA)
+            return true;
+        else
+            return false;
+    }
+
+    // |---------------Métodos Privados---------------|
+
+    // |-------------------Eventos--------------------|
+}

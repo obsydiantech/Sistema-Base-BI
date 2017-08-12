@@ -61,6 +61,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ProveedoresController.cs" />
+    <Compile Include="Entities\Cliente.cs" />
+    <Compile Include="Entities\JornadaLaboral.cs" />
+    <Compile Include="Entities\Reserva.cs" />
+    <Compile Include="Entities\Sueldo.cs" />
+    <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Gasto.cs" />
+    <Compile Include="Entities\Pedido.cs" />
+    <Compile Include="Entities\Producto.cs" />
+    <Compile Include="Entities\Proveedor.cs" />
+    <Compile Include="Entities\Servicio.cs" />
+    <Compile Include="Entities\Venta.cs" />
     <Compile Include="Forms\Admin_Forms\Management\LicenciaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,8 +171,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Entities\" />
     <Folder Include="Forms\Module_Forms\Clientes\" />
     <Folder Include="Forms\Module_Forms\Dashboard\" />
     <Folder Include="Forms\Module_Forms\Estadísticas\" />
