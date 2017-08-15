@@ -17,6 +17,11 @@ namespace Sistema_Base_BI.Forms.Admin_Forms.Management
             InitializeComponent();
         }
 
+        private void LicenciaForm_Load(object sender, EventArgs e)
+        {
+            components.SetStyle(this);
+        }
+
         private void LicenciaForm_CancelButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -26,6 +31,5 @@ namespace Sistema_Base_BI.Forms.Admin_Forms.Management
         {
 
         }
-
-        }
+    }
 }

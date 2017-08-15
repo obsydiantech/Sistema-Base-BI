@@ -1,34 +1,34 @@
-﻿public class CLASE 
+﻿// |---------------Atributos--------------------|
+	private int id;
+
+
+    public int ID
+    {
+	    get
+	    {
+	    	return this.id;
+	    }
+
+	    set
+		{
+	    	this.id = value;
+		}
+	}
+
+// |---------------Constructores----------------|
+
+private Clase()
 {
-    // |---------------Atributos---------------|
-    private static CLASE instance;
-    public static CLASE Instance
-    {
-        get
-        {
-            if (instance == null)
-            instance = new CLASE();
-
-            return instance;
-        }
-    }
-
-    // |---------------Constructores---------------|
-    private CLASE()
-    {
-
-    }
-
-    // |---------------Métodos Públicos---------------|
-    public Boolean Init()
-    {
-        if(LOGICACORRECTA)
-            return true;
-        else
-            return false;
-    }
-
-    // |---------------Métodos Privados---------------|
-
-    // |-------------------Eventos--------------------|
+	Init();
 }
+
+// |---------------Métodos Públicos--------------|
+
+// |---------------Métodos Privados---------------|
+
+private Boolean Init()
+{
+	return true;
+}
+
+// |-------------------Eventos--------------------|

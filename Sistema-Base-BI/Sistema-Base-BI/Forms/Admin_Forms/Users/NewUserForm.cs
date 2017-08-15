@@ -19,7 +19,7 @@ namespace Sistema_Base_BI.Forms.Admin_Forms.Users
 
         private void NewUserForm_Load(object sender, EventArgs e)
         {
-
+            components.SetStyle(this);
         }
 
         private void NewUserForm_CancelButton_Click(object sender, EventArgs e)

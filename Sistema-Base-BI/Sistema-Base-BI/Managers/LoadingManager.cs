@@ -1,7 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 
-using System.Windows.Forms;
+using Sistema_Base_BI.Forms;
+using System.Reflection;
 
 
 namespace Sistema_Base_BI.Managers
@@ -21,21 +22,34 @@ namespace Sistema_Base_BI.Managers
             }
         }
         private BackgroundWorker bgWorker;
+        private String asyncMethod;
+        private String finishCallback;
+        private Object obj;
+        private LoadingForm loadingForm;
 
         // |---------------Constructores---------------|
         private LoadingManager()
         {
-
+            asyncMethod = "";
         }
 
         // |---------------Métodos Públicos---------------|
 
-        public void ejecutarTareaEnSegundoPlano(String fullMethodAccess)
+        public void EjecutarTareaEnSegundoPlano(Boolean displayLoadingForm, Object obj, String asyncMethod, String finishCallback, params String[] parameters)
         {
+            this.obj = obj;
+            this.asyncMethod = asyncMethod;
+            this.finishCallback = finishCallback;
+
             bgWorker = new BackgroundWorker();
             bgWorker.RunWorkerCompleted += BgWorker_RunWorkerCompleted;
             bgWorker.DoWork += BgWorker_DoWork;
             bgWorker.WorkerSupportsCancellation = false;
+
+            if (displayLoadingForm)
+                (loadingForm = new LoadingForm()).Show();
+
+
             bgWorker.RunWorkerAsync();
         }
 
@@ -43,16 +57,27 @@ namespace Sistema_Base_BI.Managers
 
         // |-------------------Eventos--------------------|
 
-        private void BgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            // Leído por el thread UI
-            MessagesManager.Instance.NewInformationMessage("bgWorker ended!");
-        }
-
         private void BgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Leído por el thread bgWorker
-            System.Threading.Thread.Sleep(5000);
+            Type type = obj.GetType();
+            MethodInfo theMethod = type.GetMethod(asyncMethod);
+            theMethod.Invoke(obj, null);
+        }
+
+        private void BgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (loadingForm != null)
+            {
+                loadingForm.Close();
+                loadingForm = null;
+            }
+
+            if (!finishCallback.Equals(String.Empty))
+            {
+                Type type = obj.GetType();
+                MethodInfo theMethod = type.GetMethod(finishCallback);
+                theMethod.Invoke(obj, null);
+            }
         }
     }
 }

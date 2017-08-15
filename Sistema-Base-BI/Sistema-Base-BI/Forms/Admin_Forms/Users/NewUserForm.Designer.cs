@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.NewUserForm_NombreLabel = new MetroFramework.Controls.MetroLabel();
             this.NewUserForm_ApellidoLabel = new MetroFramework.Controls.MetroLabel();
             this.NewUserForm_EmailLabel = new MetroFramework.Controls.MetroLabel();
@@ -52,9 +51,7 @@
             this.NewUserForm_PassTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.NewUserForm_PasswordLabel1 = new MetroFramework.Controls.MetroLabel();
             this.NewUserForm_PasswordLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NewUserForm_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // NewUserForm_NombreLabel
@@ -297,7 +294,6 @@
             this.NewUserForm_CreateUserButton.Location = new System.Drawing.Point(382, 474);
             this.NewUserForm_CreateUserButton.Name = "NewUserForm_CreateUserButton";
             this.NewUserForm_CreateUserButton.Size = new System.Drawing.Size(308, 46);
-            this.NewUserForm_CreateUserButton.Style = MetroFramework.MetroColorStyle.Green;
             this.NewUserForm_CreateUserButton.TabIndex = 15;
             this.NewUserForm_CreateUserButton.Text = "Crear Usuario";
             this.NewUserForm_CreateUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -311,7 +307,6 @@
             this.NewUserForm_CancelButton.Location = new System.Drawing.Point(44, 474);
             this.NewUserForm_CancelButton.Name = "NewUserForm_CancelButton";
             this.NewUserForm_CancelButton.Size = new System.Drawing.Size(308, 46);
-            this.NewUserForm_CancelButton.Style = MetroFramework.MetroColorStyle.Green;
             this.NewUserForm_CancelButton.TabIndex = 16;
             this.NewUserForm_CancelButton.Text = "Cancelar";
             this.NewUserForm_CancelButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -487,15 +482,11 @@
             this.NewUserForm_PasswordLabel2.UseCustomBackColor = true;
             this.NewUserForm_PasswordLabel2.UseCustomForeColor = true;
             // 
-            // metroStyleManager1
-            // 
-            this.metroStyleManager1.Owner = this;
-            this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.Green;
-            // 
             // NewUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(776, 562);
             this.Controls.Add(this.NewUserForm_PasswordLabel2);
             this.Controls.Add(this.NewUserForm_PasswordLabel1);
@@ -519,14 +510,16 @@
             this.Controls.Add(this.NewUserForm_EmailLabel);
             this.Controls.Add(this.NewUserForm_ApellidoLabel);
             this.Controls.Add(this.NewUserForm_NombreLabel);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(776, 562);
+            this.MinimumSize = new System.Drawing.Size(776, 562);
             this.Name = "NewUserForm";
-            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "Crear nuevo usuario";
-            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.NewUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NewUserForm_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,6 +550,5 @@
         private MetroFramework.Controls.MetroTextBox NewUserForm_PassTextBox2;
         private MetroFramework.Controls.MetroLabel NewUserForm_PasswordLabel1;
         private MetroFramework.Controls.MetroLabel NewUserForm_PasswordLabel2;
-        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }

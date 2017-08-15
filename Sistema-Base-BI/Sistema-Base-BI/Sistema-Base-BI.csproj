@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
@@ -58,6 +61,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ProveedoresController.cs" />
+    <Compile Include="Entities\Cliente.cs" />
+    <Compile Include="Entities\JornadaLaboral.cs" />
+    <Compile Include="Entities\Reserva.cs" />
+    <Compile Include="Entities\Sueldo.cs" />
+    <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Gasto.cs" />
+    <Compile Include="Entities\Pedido.cs" />
+    <Compile Include="Entities\Producto.cs" />
+    <Compile Include="Entities\Proveedor.cs" />
+    <Compile Include="Entities\Servicio.cs" />
+    <Compile Include="Entities\Venta.cs" />
     <Compile Include="Forms\Admin_Forms\Management\LicenciaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +84,12 @@
     </Compile>
     <Compile Include="Forms\Admin_Forms\Users\NewUserForm.Designer.cs">
       <DependentUpon>NewUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -82,15 +103,24 @@
     <Compile Include="Forms\MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainForms\StartForm.cs">
+    <Compile Include="Forms\MainForms\InitForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainForms\StartForm.Designer.cs">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <Compile Include="Forms\MainForms\InitForm.Designer.cs">
+      <DependentUpon>InitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Personalization.cs" />
+    <Compile Include="Forms\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Managers\CloseManager.cs" />
+    <Compile Include="Managers\ConfigManager.cs" />
     <Compile Include="Managers\DBManager.cs" />
     <Compile Include="Managers\ExceptionManager.cs" />
+    <Compile Include="Managers\FileManager.cs" />
     <Compile Include="Managers\LoadingManager.cs" />
     <Compile Include="Managers\LogManager.cs" />
     <Compile Include="Managers\MessagesManager.cs" />
@@ -103,14 +133,17 @@
     <EmbeddedResource Include="Forms\Admin_Forms\Users\NewUserForm.resx">
       <DependentUpon>NewUserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForms\StartForm.resx">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainForms\InitForm.resx">
+      <DependentUpon>InitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,7 +153,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -136,8 +171,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Entities\" />
     <Folder Include="Forms\Module_Forms\Clientes\" />
     <Folder Include="Forms\Module_Forms\Dashboard\" />
     <Folder Include="Forms\Module_Forms\Estadísticas\" />
