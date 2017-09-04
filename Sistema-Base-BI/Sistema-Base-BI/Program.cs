@@ -1,23 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Sistema_Base_BI.Forms;
 
 namespace Sistema_Base_BI
 {
     static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
-        [STAThread]//aydio
+        [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.MainForms.InitForm());
+
+            Forms.LoginForm loginForm = new LoginForm();
+
+            Main main = new Main(loginForm);
+
+            Application.Run(loginForm);
         }
     }
 }

@@ -1,0 +1,78 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+
+using Sistema_Base_BI.Entities;
+using Sistema_Base_BI.Managers;
+
+
+namespace Sistema_Base_BI.Controllers
+{
+
+
+    public class Controller 
+    {
+            // |---------------Atributos---------------|
+        private static Controller instance;
+        public static Controller Instance
+        {
+            get
+            {
+                if (instance == null)
+                instance = new Controller();
+
+                return instance;
+            }
+        }
+
+            // |---------------Constructores---------------|
+        private Controller()
+        {
+           Init();
+       }
+
+            // |---------------Métodos Públicos---------------|
+       public Boolean Init()
+       {
+        if(LOGICACORRECTA)
+        return true;
+        else
+        return false;
+    }
+
+    public Boolean Agregar(Entitie entitie)
+    {
+        return DBManager.Instance.Execute("EXEC SP_Agregar_Entitie()");
+    }
+
+    public Boolean Modificar(Entitie entitie)
+    {
+        return DBManager.Instance.Execute("EXEC SP_Modificar_Entitie()");
+    }
+
+    public Boolean Eliminar(int id)
+    {
+        return DBManager.Instance.Execute("EXEC SP_Eliminar_Entitie(" + id + ")");
+
+    }
+
+    public List<Entitie> GetEntities()
+    {
+        List<Entitie> entities = new List<Entitie>();
+
+        DataTable dt = DBManager.Instance.ExecuteQuery("EXEC SP_Get_Entities()");
+
+        for (int i=0; i < dt.Rows.Count; i++)
+        {
+            entities.Add(new Entitie());
+        }
+
+
+        return entities;
+    }
+
+            // |---------------Métodos Privados---------------|
+
+            // |-------------------Eventos--------------------|
+}
+}

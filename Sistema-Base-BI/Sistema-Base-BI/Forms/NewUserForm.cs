@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_Base_BI.Forms.Admin_Forms.Users
+namespace Sistema_Base_BI.Forms
 {
     public partial class NewUserForm : MetroFramework.Forms.MetroForm
     {

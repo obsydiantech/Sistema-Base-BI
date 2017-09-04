@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Base_BI.Entities
 {
-    class Servicio
+    public class Servicio
     {
         // |---------------Atributos--------------------|
         private String id;
@@ -92,7 +92,7 @@ namespace Sistema_Base_BI.Entities
 
         // |---------------Constructores----------------|
 
-        private Servicio()
+        public Servicio()
         {
             Init();
         }

@@ -32,6 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -61,8 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\EmpleadosController.cs" />
+    <Compile Include="Controllers\JornadasLaboralesController.cs" />
     <Compile Include="Controllers\ProveedoresController.cs" />
     <Compile Include="Entities\Cliente.cs" />
+    <Compile Include="Entities\Dia.cs" />
     <Compile Include="Entities\JornadaLaboral.cs" />
     <Compile Include="Entities\Reserva.cs" />
     <Compile Include="Entities\Sueldo.cs" />
@@ -73,16 +78,22 @@
     <Compile Include="Entities\Proveedor.cs" />
     <Compile Include="Entities\Servicio.cs" />
     <Compile Include="Entities\Venta.cs" />
-    <Compile Include="Forms\Admin_Forms\Management\LicenciaForm.cs">
+    <Compile Include="Forms\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Management\LicenciaForm.Designer.cs">
+    <Compile Include="Forms\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LicenciaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LicenciaForm.Designer.cs">
       <DependentUpon>LicenciaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Users\NewUserForm.cs">
+    <Compile Include="Forms\NewUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Users\NewUserForm.Designer.cs">
+    <Compile Include="Forms\NewUserForm.Designer.cs">
       <DependentUpon>NewUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoadingForm.cs">
@@ -91,22 +102,22 @@
     <Compile Include="Forms\LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainForms\LoginForm.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainForms\LoginForm.Designer.cs">
+    <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainForms\MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainForms\MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainForms\InitForm.cs">
+    <Compile Include="Forms\InitForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainForms\InitForm.Designer.cs">
+    <Compile Include="Forms\InitForm.Designer.cs">
       <DependentUpon>InitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Personalization.cs" />
@@ -116,37 +127,45 @@
     <Compile Include="Forms\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main.cs" />
     <Compile Include="Managers\CloseManager.cs" />
     <Compile Include="Managers\ConfigManager.cs" />
     <Compile Include="Managers\DBManager.cs" />
     <Compile Include="Managers\ExceptionManager.cs" />
     <Compile Include="Managers\FileManager.cs" />
+    <Compile Include="Managers\FormsManager.cs" />
     <Compile Include="Managers\LoadingManager.cs" />
     <Compile Include="Managers\LogManager.cs" />
     <Compile Include="Managers\MessagesManager.cs" />
     <Compile Include="Managers\NamesManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Admin_Forms\Management\LicenciaForm.resx">
+    <EmbeddedResource Include="Forms\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LicenciaForm.resx">
       <DependentUpon>LicenciaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin_Forms\Users\NewUserForm.resx">
+    <EmbeddedResource Include="Forms\NewUserForm.resx">
       <DependentUpon>NewUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForms\LoginForm.resx">
+    <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForms\MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForms\InitForm.resx">
+    <EmbeddedResource Include="Forms\InitForm.resx">
       <DependentUpon>InitForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -170,13 +189,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Module_Forms\Clientes\" />
-    <Folder Include="Forms\Module_Forms\Dashboard\" />
-    <Folder Include="Forms\Module_Forms\Estadísticas\" />
-    <Folder Include="Forms\Module_Forms\Proveedores\" />
-    <Folder Include="Forms\Module_Forms\Ventas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

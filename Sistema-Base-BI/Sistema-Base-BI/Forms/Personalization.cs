@@ -9,8 +9,8 @@ namespace Sistema_Base_BI.Forms
     public static class Personalization
     {
         //What is your style
-        private const MetroColorStyle formStyle = MetroColorStyle.Purple;
-        private const MetroThemeStyle formTheme = MetroThemeStyle.Dark;
+        private const MetroColorStyle formStyle = MetroColorStyle.Red;
+        private const MetroThemeStyle formTheme = MetroThemeStyle.Light;
 
         public static void SetStyle(this IContainer container, MetroForm ownerForm)
         {

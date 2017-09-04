@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Base_BI.Entities
 {
-    class Venta
+    public class Venta
     {
         // |---------------Atributos--------------------|
         private int id;
@@ -92,7 +92,7 @@ namespace Sistema_Base_BI.Entities
 
         // |---------------Constructores----------------|
 
-        private Venta()
+        public Venta()
         {
             Init();
         }

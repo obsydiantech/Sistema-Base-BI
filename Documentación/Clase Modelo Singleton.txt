@@ -16,7 +16,7 @@
     // |---------------Constructores---------------|
     private CLASE()
     {
-
+    	Init();
     }
 
     // |---------------Métodos Públicos---------------|

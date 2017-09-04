@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Sistema_Base_BI.Entities
 {
-    class Cliente
+    public class Cliente
     {
         // |---------------Atributos--------------------|
         private int id;
-        private int nombre;
-        private int usuario;
-        private int telefono1;
-        private int telefono2;
-        private int email;
+        private String nombre;
+        private String apellido;
+        private String usuario;
+        private String telefono1;
+        private String telefono2;
+        private String email;
 
 
         public int ID
@@ -29,7 +30,7 @@ namespace Sistema_Base_BI.Entities
                 this.id = value;
             }
         }
-        public int Nombre
+        public String Nombre
         {
             get
             {
@@ -41,7 +42,19 @@ namespace Sistema_Base_BI.Entities
                 this.nombre = value;
             }
         }
-        public int Usuario
+        public String Apellido
+        {
+            get
+            {
+                return this.apellido;
+            }
+
+            set
+            {
+                this.apellido = value;
+            }
+        }
+        public String Usuario
         {
             get
             {
@@ -53,7 +66,7 @@ namespace Sistema_Base_BI.Entities
                 this.usuario = value;
             }
         }
-        public int Telefono1
+        public String Telefono1
         {
             get
             {
@@ -65,7 +78,7 @@ namespace Sistema_Base_BI.Entities
                 this.telefono1 = value;
             }
         }
-        public int Telefono2
+        public String Telefono2
         {
             get
             {
@@ -77,7 +90,7 @@ namespace Sistema_Base_BI.Entities
                 this.telefono2 = value;
             }
         }
-        public int Email
+        public String Email
         {
             get
             {
@@ -86,14 +99,34 @@ namespace Sistema_Base_BI.Entities
 
             set
             {
-                this.email= value;
+                this.email = value;
             }
         }
 
         // |---------------Constructores----------------|
 
-        private Cliente()
+        public Cliente(int id, String nombre, String apellido, String usuario, String telefono1, String telefono2, String email)
         {
+            ID = id;
+            Nombre = nombre;
+            Apellido= apellido;
+            Usuario = usuario;
+            Telefono1 = telefono1;
+            Telefono2 = telefono2;
+            Email = email;
+
+            Init();
+        }
+
+        public Cliente(String nombre, String apellido, String usuario, String telefono1, String telefono2, String email)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            Usuario = usuario;
+            Telefono1 = telefono1;
+            Telefono2 = telefono2;
+            Email = email;
+
             Init();
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Base_BI.Entities
 {
-    class Reserva
+    public class Reserva
     {
         // |---------------Atributos--------------------|
         private int id;
@@ -117,7 +117,7 @@ namespace Sistema_Base_BI.Entities
         }
         // |---------------Constructores----------------|
 
-        private Reserva()
+        public Reserva()
         {
             Init();
         }

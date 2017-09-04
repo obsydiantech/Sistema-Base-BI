@@ -29,7 +29,7 @@ namespace Sistema_Base_BI.Managers
         // |---------------Métodos Públicos---------------|
         public Boolean Init()
         {
-            resourceManager = new ResourceManager("General", typeof(ConfigManager).Assembly);
+            resourceManager = new ResourceManager("Sistema_Base_BI.Properties.Resources", GetType().Assembly);
             return true;
         }
 
@@ -47,6 +47,7 @@ namespace Sistema_Base_BI.Managers
         public String GetApplicationVersion()
         {
             return resourceManager.GetString("VERSION");
+            
         }
 
 

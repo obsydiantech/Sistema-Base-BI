@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Base_BI.Entities
 {
-    class Pedido
+    public class Pedido
     {
         // |---------------Atributos--------------------|
         private int id;
@@ -105,7 +105,7 @@ namespace Sistema_Base_BI.Entities
 
         // |---------------Constructores----------------|
 
-        private Pedido()
+        public Pedido()
         {
             Init();
         }

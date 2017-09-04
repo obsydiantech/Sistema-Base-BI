@@ -1,4 +1,4 @@
-﻿namespace Sistema_Base_BI.Forms.Admin_Forms.Management
+﻿namespace Sistema_Base_BI.Forms
 {
     partial class LicenciaForm
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Base_BI.Entities
 {
-    class JornadaLaboral
+    public class JornadaLaboral
     {
         // |---------------Atributos--------------------|
         private int id;
@@ -66,8 +66,22 @@ namespace Sistema_Base_BI.Entities
 
         // |---------------Constructores----------------|
 
-        private JornadaLaboral()
+        public JornadaLaboral(int id, List<int> dias, String desde, String hasta)
         {
+            ID = id;
+            Dias = dias;
+            Desde = desde;
+            Hasta = hasta;
+
+            Init();
+        }
+
+        public JornadaLaboral(List<int> dias, String desde, String hasta)
+        {
+            Dias = dias;
+            Desde = desde;
+            Hasta = hasta;
+
             Init();
         }
 

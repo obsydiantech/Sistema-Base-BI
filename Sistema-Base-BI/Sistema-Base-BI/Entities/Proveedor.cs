@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Base_BI.Entities
 {
-    class Proveedor
+    public class Proveedor
     {
         // |---------------Atributos--------------------|
         private int id;
@@ -116,8 +116,30 @@ namespace Sistema_Base_BI.Entities
         }
 
         // |---------------Constructores----------------|
-        private Proveedor()
+        public Proveedor(int id, String nombre, String apellido, String telefono1, String telefono2, String telefono3, String email, String direccion)
         {
+            ID = id;
+            Nombre = nombre;
+            Apellido = apellido;
+            Telefono1 = telefono1;
+            Telefono2 = telefono2;
+            Telefono3 = telefono3;
+            Email = email;
+            Direccion = direccion;
+
+            Init();
+        }
+
+        public Proveedor(String nombre, String apellido, String telefono1, String telefono2, String telefono3, String email, String direccion)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            Telefono1 = telefono1;
+            Telefono2 = telefono2;
+            Telefono3 = telefono3;
+            Email = email;
+            Direccion = direccion;
+
             Init();
         }
 
