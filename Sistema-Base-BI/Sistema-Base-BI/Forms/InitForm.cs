@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 using Sistema_Base_BI.Managers;
 
-namespace Sistema_Base_BI.Forms.MainForms
+namespace Sistema_Base_BI.Forms
 {
     public partial class InitForm : Form
     {
@@ -65,7 +65,7 @@ namespace Sistema_Base_BI.Forms.MainForms
             if (Opacity == 0)
             {
                 fadingOutTimer.Stop();
-                MainForms.LoginForm mf1 = new MainForms.LoginForm();
+                LoginForm mf1 = new LoginForm();
                 mf1.Show();
                 Hide();
             }

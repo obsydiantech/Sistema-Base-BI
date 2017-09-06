@@ -1,4 +1,4 @@
-﻿namespace Sistema_Base_BI.Forms.MainForms
+﻿namespace Sistema_Base_BI.Forms
 {
     partial class InitForm
     {

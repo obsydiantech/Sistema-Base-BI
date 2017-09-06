@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Base_BI.Entities
 {
-    class Empleado
+    public class Empleado
     {
         // |---------------Atributos--------------------|
         private int id;
@@ -130,8 +130,32 @@ namespace Sistema_Base_BI.Entities
 
         // |---------------Constructores----------------|
 
-        private Empleado()
+        public Empleado(int id, int idSsueldo, int idJornadaLaboral, String nombre, String apellido, String dni, String telefono1, String telefono2, String email)
         {
+            ID = id;
+            IDSueldo = idSsueldo;
+            IDJornadaLaboral = idJornadaLaboral;
+            Nombre = nombre;
+            Apellido = apellido;
+            DNI = dni;
+            Telefono1 = telefono1;
+            Telefono2 = telefono2;
+            Email = email;
+
+            Init();
+        }
+
+        public Empleado(int idSsueldo, int idJornadaLaboral, String nombre, String apellido, String dni, String telefono1, String telefono2, String email)
+        {
+            IDSueldo = idSsueldo;
+            IDJornadaLaboral = idJornadaLaboral;
+            Nombre = nombre;
+            Apellido = apellido;
+            DNI = dni;
+            Telefono1 = telefono1;
+            Telefono2 = telefono2;
+            Email = email;
+
             Init();
         }
 

@@ -1,11 +1,11 @@
 ﻿using System;
 
 using System.Windows.Forms;
-using MetroFramework.Components;
 using MetroFramework.Forms;
-using Sistema_Base_BI.Forms.Admin_Forms.Users;
 
-namespace Sistema_Base_BI.Forms.MainForms
+using Sistema_Base_BI.Managers;
+
+namespace Sistema_Base_BI.Forms
 {
     public partial class LoginForm : MetroForm
     {
@@ -28,22 +28,20 @@ namespace Sistema_Base_BI.Forms.MainForms
 
         private void LoginForm_LoginButton_Click(object sender, EventArgs e)
         {
-            if ( LoginForm_UserTextBox.Text == "usuario" && LoginForm_PassTextBox.Text == "password")
-            {
-                MainForm mf = new MainForm();
-                this.Hide();
-                mf.Show();
-
-            } else
-            {
-                MetroFramework.MetroMessageBox.Show(this, "Usuario o contraseña incorrectos", "Error de acceso",MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
+            if (LoginForm_UserTextBox.Text == "" && LoginForm_PassTextBox.Text == "")
+                FormsManager.Instance.NewForm("TestForm", false);
+            else
+                MetroFramework.MetroMessageBox.Show(this, "Usuario o contraseña incorrectos", "Error de acceso", MessageBoxButtons.OK, MessageBoxIcon.Hand);
         }
 
         private void LoginForm_LicenceButton_Click(object sender, EventArgs e)
         {
-            Forms.Admin_Forms.Management.LicenciaForm lf = new Forms.Admin_Forms.Management.LicenciaForm();
-            lf.Show();
+            FormsManager.Instance.NewForm("LicenciaForm", false);
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormsManager.Instance.PrevForm();
         }
     }
 }

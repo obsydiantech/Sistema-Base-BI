@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sistema_Base_BI.Entities
 {
-    public class Sueldo
+    public class Dia
     {
         // |---------------Atributos--------------------|
         private int id;
-        private int fechaPago;
-        private int importeBruto;
-        private int importeNeto;
+        private String nombre;
 
 
         public int ID
@@ -27,47 +25,33 @@ namespace Sistema_Base_BI.Entities
                 this.id = value;
             }
         }
-        public int FechaPago
+        public String Nombre
         {
             get
             {
-                return this.fechaPago;
+                return this.nombre;
             }
 
             set
             {
-                this.fechaPago = value;
-            }
-        }
-        public int ImporteBruto
-        {
-            get
-            {
-                return this.importeBruto;
-            }
-
-            set
-            {
-                this.importeBruto = value;
-            }
-        }
-        public int ImporteNeto
-        {
-            get
-            {
-                return this.importeNeto;
-            }
-
-            set
-            {
-                this.importeNeto = value;
+                this.nombre = value;
             }
         }
 
         // |---------------Constructores----------------|
 
-        public Sueldo()
+        private Dia(int id, String nombre)
         {
+            ID = id;
+            Nombre = nombre;
+
+            Init();
+        }
+
+        private Dia(String nombre)
+        {
+            Nombre = nombre;
+
             Init();
         }
 

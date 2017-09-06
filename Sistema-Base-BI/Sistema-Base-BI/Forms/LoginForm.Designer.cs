@@ -1,4 +1,4 @@
-﻿namespace Sistema_Base_BI.Forms.MainForms
+﻿namespace Sistema_Base_BI.Forms
 {
     partial class LoginForm
     {
@@ -259,6 +259,7 @@
             this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "Iniciar Sesión";
             this.Theme = MetroFramework.MetroThemeStyle.Default;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
